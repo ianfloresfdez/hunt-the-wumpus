@@ -46,7 +46,6 @@ Disponemos de dos botones de acción:
 Por pantalla tendremos diálogos de texto donde nos indicará que está pasando en nuestro entorno:
 
 - Si estamos cerca del monstruo
-- Si estamos cerca del oro
 - Si estamos cerca de un pozo
 - Si nos chocamos con un muro
 - Si hemos muerto
@@ -56,5 +55,5 @@ Por pantalla tendremos diálogos de texto donde nos indicará que está pasando 
 
 Esta información se actualizará cuando vayamos realizando acciones.
 
-Una vez hayamos perdido o ganado, el juego nos lo hará saber y podremos reiniciar el juego y volver al menú de parametrización de la partida para poder volver a jugar.
+Una vez hayamos perdido o ganado, el juego nos lo hará saber y podremos y volver al menú de parametrización de la partida para poder volver a jugar.
 
