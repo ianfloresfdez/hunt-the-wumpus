@@ -16,7 +16,7 @@ Para ejecutar y comprobar los tests unitarios deberemos ejecutar la consulta 'ng
 
 ## Instrucciones para jugar
 
-El objetivo del juego es recoger el oro y volver a la salida sin ser asesinados por el monstruo o precipitados en un puente.
+El objetivo del juego es recoger el oro y volver a la salida sin ser asesinados por el monstruo o precipitados en un pozo.
 Para ello empezamos en la casilla superior izquierda, es nuestro punto de inicio y final, cuando tengamos el oro deberemos volver donde empecemos la partida. Tenemos lanzas para poder matar el monstruo, pero no podremos evitar de ninguna caer en un pozo si nos topamos con uno.
 
 Al entrar al juego veremos una pantalla que nos pedirá tres parámetros:
