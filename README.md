@@ -38,6 +38,11 @@ Disponemos de 4 botones para poder controlar las direcciones de nuestras accione
 - Abajo
 
 Para realizar cualquier acción (desplazarse o lanzar una lanza) debemos marcar una dirección, que será hacia donde ejecutara nuestra acción.
+Disponemos de dos botones de acción:
+
+- Avanzar (moverá el jugar hacia la casilla en la dirección que tengamos marcada)
+- Lanzar lanza (lanzara una lanza que atravesara todas las casillas en la dirección que tengamos marcada)
+
 Por pantalla tendremos diálogos de texto donde nos indicara que está pasando en nuestro entorno:
 
 - Si estamos cerca del monstruo
