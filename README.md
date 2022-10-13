@@ -40,7 +40,7 @@ Disponemos de 4 botones para poder controlar las direcciones de nuestras accione
 Para realizar cualquier acción (desplazarse o lanzar una lanza) debemos marcar una dirección, que será hacia donde ejecutará nuestra acción.
 Disponemos de dos botones de acción:
 
-- Avanzar (moverá el jugar hacia la casilla en la dirección que tengamos marcada)
+- Avanzar (moverá el jugador hacia la casilla en la dirección que tengamos marcada)
 - Lanzar lanza (lanzará una lanza que atravesará todas las casillas en la dirección que tengamos marcada)
 
 Por pantalla tendremos diálogos de texto donde nos indicará que está pasando en nuestro entorno:
