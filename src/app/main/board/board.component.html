@@ -1,25 +1,16 @@
-<h1>MENU PRINCIPAL</h1>
+<h1>MENÚ PRINCIPAL</h1>
 <hr />
 <div class="parameters">
   <form [formGroup]="parameters" (ngSubmit)="start()">
     <span class="board">Tamaño del tablero (NxN): </span>
-    <input
-      type="number"
-      class="form-control"
-      formControlName="board"
-      name="board"
-      id="board"
-    />
+    <input type="number" class="form-control" formControlName="board" name="board" id="board" />
     <!-- ERROR CONTROL FOR BOARD VAR -->
-    <div
-      *ngIf="
+    <div *ngIf="
         submitted &&
         parameters.controls['board'].invalid &&
         (parameters.controls['board'].dirty ||
           parameters.controls['board'].touched)
-      "
-      class="alert"
-    >
+      " class="alert">
       <p class="text-danger">
         Solo se pueden introducir números entre el 2 y el 10.
       </p>
@@ -27,23 +18,14 @@
     <!-- ERROR CONTROL FOR BOARD VAR -->
 
     <span class="board">Pozos: </span>
-    <input
-      type="number"
-      class="form-control"
-      formControlName="wells"
-      name="wells"
-      id="wells"
-    />
+    <input type="number" class="form-control" formControlName="wells" name="wells" id="wells" />
     <!-- ERROR CONTROL FOR WELLS VAR -->
-    <div
-      *ngIf="
+    <div *ngIf="
         submitted &&
         parameters.controls['wells'].invalid &&
         (parameters.controls['wells'].dirty ||
           parameters.controls['wells'].touched)
-      "
-      class="alert"
-    >
+      " class="alert">
       <p class="text-danger">Se debe asignar mínimo 1 pozo.</p>
     </div>
     <div *ngIf="submitted && errorWellsBoard" class="alert">
@@ -54,23 +36,14 @@
     <!-- ERROR CONTROL FOR BOARD VAR -->
 
     <span class="board">Lanzas: </span>
-    <input
-      type="number"
-      class="form-control"
-      formControlName="spears"
-      name="spears"
-      id="spears"
-    />
+    <input type="number" class="form-control" formControlName="spears" name="spears" id="spears" />
     <!-- ERROR CONTROL FOR BOARD SPEARS -->
-    <div
-      *ngIf="
+    <div *ngIf="
         submitted &&
         parameters.controls['spears'].invalid &&
         (parameters.controls['spears'].dirty ||
           parameters.controls['spears'].touched)
-      "
-      class="alert"
-    >
+      " class="alert">
       <p class="text-danger">Se debe asignar mínimo 1 lanza.</p>
     </div>
     <!-- ERROR CONTROL FOR BOARD VAR -->
