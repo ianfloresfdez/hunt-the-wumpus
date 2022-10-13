@@ -1,0 +1,110 @@
+<div class="content">
+  <!-- CONTROL IF GAME IS OVER -->
+  <div *ngIf="gameOver == 2">
+    <p class="text-danger">HAS PERDIDO</p>
+  </div>
+  <div *ngIf="gameOver == 1">
+    <p class="text-success">HAS GANADO</p>
+  </div>
+  <button
+    *ngIf="gameOver != 0"
+    class="btn btn-primary p-1"
+    (click)="resetGame()"
+  >
+    REINICIAR PARTIDA
+  </button>
+  <!-- CONTROL IF GAME IS OVER -->
+
+  <!-- BOARD -->
+  <table class="board">
+    <tr class="p-3" *ngFor="let i of auxBoard">
+      <td class="p-3" *ngFor="let j of i">
+        {{ j }}
+      </td>
+    </tr>
+  </table>
+  <!-- BOARD -->
+
+  <!-- BUTTONS TO SELECT WHERE TO ACT -->
+  <div class="row p-1">
+    <div class="col-md-3">
+      <button
+        id="left"
+        class="btn"
+        [disabled]="gameOver != 0"
+        [ngClass]="{ 'btn-success': movementSel == 'left' }"
+        (click)="selectDirection('left')"
+      >
+        Izquierda
+      </button>
+    </div>
+    <div class="col-md-3">
+      <button
+        id="right"
+        class="btn"
+        [disabled]="gameOver != 0"
+        [ngClass]="{ 'btn-success': movementSel == 'right' }"
+        (click)="selectDirection('right')"
+      >
+        Derecha
+      </button>
+    </div>
+    <div class="col-md-3">
+      <button
+        id="up"
+        class="btn"
+        [disabled]="gameOver != 0"
+        [ngClass]="{ 'btn-success': movementSel == 'up' }"
+        (click)="selectDirection('up')"
+      >
+        Arriba
+      </button>
+    </div>
+    <div class="col-md-3">
+      <button
+        id="down"
+        class="btn btn-success"
+        [disabled]="gameOver != 0"
+        [ngClass]="{ 'btn-success': movementSel == 'down' }"
+        (click)="selectDirection('down')"
+      >
+        Abajo
+      </button>
+    </div>
+  </div>
+  <!-- BUTTONS TO SELECT WHERE TO ACT -->
+
+  <!-- BUTTONS TO DO AN ACTION -->
+  <div class="row p-1">
+    <div class="col-md-6">
+      <button
+        class="btn btn-primary"
+        [disabled]="gameOver != 0"
+        (click)="movePlayer()"
+      >
+        Avanzar
+      </button>
+    </div>
+    <div class="col-md-6">
+      <button
+        class="btn btn-primary"
+        [disabled]="gameOver != 0 || spears <= 0"
+        (click)="throwSpear()"
+      >
+        Lanzar
+      </button>
+    </div>
+  </div>
+  <!-- BUTTONS TO DO AN ACTION -->
+
+  <!-- LIVE GAME INFORMATION -->
+  <p>Numero de lanzas restantes: {{ spears }}</p>
+  <p *ngIf="killMessage != ''">{{ killMessage }}</p>
+  <div *ngFor="let message of consoleMessages">
+    <p>{{ message }}</p>
+  </div>
+  <div *ngFor="let message of finalMessage">
+    <p>{{ message }}</p>
+  </div>
+  <!-- LIVE GAME INFORMATION -->
+</div>

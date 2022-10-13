@@ -1,0 +1,82 @@
+<h1>MENU PRINCIPAL</h1>
+<hr />
+<div class="parameters">
+  <form [formGroup]="parameters" (ngSubmit)="start()">
+    <span class="board">Tamaño del tablero (NxN): </span>
+    <input
+      type="number"
+      class="form-control"
+      formControlName="board"
+      name="board"
+      id="board"
+    />
+    <!-- ERROR CONTROL FOR BOARD VAR -->
+    <div
+      *ngIf="
+        submitted &&
+        parameters.controls['board'].invalid &&
+        (parameters.controls['board'].dirty ||
+          parameters.controls['board'].touched)
+      "
+      class="alert"
+    >
+      <p class="text-danger">
+        Solo se pueden introducir números entre el 2 y el 10.
+      </p>
+    </div>
+    <!-- ERROR CONTROL FOR BOARD VAR -->
+
+    <span class="board">Pozos: </span>
+    <input
+      type="number"
+      class="form-control"
+      formControlName="wells"
+      name="wells"
+      id="wells"
+    />
+    <!-- ERROR CONTROL FOR WELLS VAR -->
+    <div
+      *ngIf="
+        submitted &&
+        parameters.controls['wells'].invalid &&
+        (parameters.controls['wells'].dirty ||
+          parameters.controls['wells'].touched)
+      "
+      class="alert"
+    >
+      <p class="text-danger">Se debe asignar mínimo 1 pozo.</p>
+    </div>
+    <div *ngIf="submitted && errorWellsBoard" class="alert">
+      <p class="text-danger">
+        El número de pozos no puede ser mayor al número del tablero
+      </p>
+    </div>
+    <!-- ERROR CONTROL FOR BOARD VAR -->
+
+    <span class="board">Lanzas: </span>
+    <input
+      type="number"
+      class="form-control"
+      formControlName="spears"
+      name="spears"
+      id="spears"
+    />
+    <!-- ERROR CONTROL FOR BOARD SPEARS -->
+    <div
+      *ngIf="
+        submitted &&
+        parameters.controls['spears'].invalid &&
+        (parameters.controls['spears'].dirty ||
+          parameters.controls['spears'].touched)
+      "
+      class="alert"
+    >
+      <p class="text-danger">Se debe asignar mínimo 1 lanza.</p>
+    </div>
+    <!-- ERROR CONTROL FOR BOARD VAR -->
+
+    <!-- SUBMIT THAT REDIRECTS TO THE GAME -->
+    <br />
+    <button type="button" class="btn btn-primary" type="submit">JUGAR</button>
+  </form>
+</div>
