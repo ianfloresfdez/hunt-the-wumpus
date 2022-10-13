@@ -27,7 +27,7 @@ Al entrar al juego veremos una pantalla que nos pedirá tres parámetros:
 
 El tablero no puede ser más grande que 10x10 y debe ser, como mínimo, de tamaño 2x2.
 El número de pozos ha sido limitado a que sea más pequeño o igual que la longitud del tablero, de esta forma evitaremos sobrepoblar el tablero de pozos.
-Se ha definido un número de lanzas indefinido, pero como mínimo deberemos tener una lanza para poder jugar.
+No hay un número de lanzas definido, pero como mínimo deberemos tener una lanza para poder jugar.
 
 Una vez completados los parámetros correctamente nos encontraremos en la pantalla principal del juego, donde nuestra partida habrá empezado.
 Disponemos de 4 botones para poder controlar las direcciones de nuestras acciones:
