@@ -1,4 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+.toolbar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #1976d2;
+  color: white;
+  font-weight: 600;
+  text-align: center;
+}
+
 .content {
   display: flex;
   margin: 32px auto 32px;
